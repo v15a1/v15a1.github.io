@@ -34,32 +34,29 @@ body::-webkit-scrollbar{
     
 }
 
-.nav-content{
-    text-align: center;
-    background: #333;
-    height: 80px;
-    width : 50%;
-    margin: auto;
-    font-family: "Montserrat";
-    font-size: 16px;
+.scroll-line{
+    height: 8px;
+    position: fixed;
+/*    width: 100%;*/
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
-.nav-items{
-    margin: auto;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.gradient{
+    background-image: linear-gradient(to right,#ffe773,#ff0052,#750000);
 }
 
-.nav-link{
-    width: 100px;
+.solid{
+    background : #FFD600;
 }
+
 
 /*Hero*/
 .hero-image {
     background-image: linear-gradient(to top right,#750000,#ff0052,#ffe773);
     height: 100%;
+    min-height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +86,12 @@ body::-webkit-scrollbar{
 .about-me{
     height : 100%;
     background : #fbfbfb;
+    min-height: 300px;
+}
 
+.strike{
+    text-decoration: line-through;
+    font-weight: 100;
 }
 
 .about-me-center{
@@ -178,10 +180,10 @@ body::-webkit-scrollbar{
     0 2.8px 2.2px rgba(219, 219, 219, 0.034),
     0 6.7px 5.3px rgba(219, 219, 219, 0.048),
     0 12.5px 10px rgba(219, 219, 219, 0.06),
-  0 22.3px 17.9px rgba(219, 219, 219, 0.072),
-  0 41.8px 33.4px rgba(219, 219, 219, 0.086),
-     0 100px 80px rgba(219, 219, 219, 0.12)
-  ;
+    0 22.3px 17.9px rgba(219, 219, 219, 0.072),
+    0 41.8px 33.4px rgba(219, 219, 219, 0.086),
+    0 100px 80px rgba(219, 219, 219, 0.12)
+    ;
 }
 
 .project-image-holder{
@@ -248,10 +250,87 @@ body::-webkit-scrollbar{
     cursor: pointer;
 }
 
+/*Experience*/
+.experiences{
+    height: auto;
+    min-height : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-center{
+    margin : 50px;
+    width: 50%;
+}
+
+.experience-container{
+    height: auto;
+}
+
+.experience{
+    height: 600px;
+    /*    width : 500px;*/
+    border-radius : 20px;
+    background: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow : hidden;
+    margin-bottom: 50px;
+    box-shadow:
+    0 2.8px 2.2px rgba(219, 219, 219, 0.034),
+    0 6.7px 5.3px rgba(219, 219, 219, 0.048),
+    0 12.5px 10px rgba(219, 219, 219, 0.06),
+    0 22.3px 17.9px rgba(219, 219, 219, 0.072),
+    0 41.8px 33.4px rgba(219, 219, 219, 0.086),
+    0 100px 80px rgba(219, 219, 219, 0.12)
+    ;
+}
+
+.experience-image-holder{
+    background: #555;
+    /*    flex: 50%;*/
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.experience-thumbnail{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.experience-content{
+    flex: 50%;
+}
+
+.experience-details{
+    margin : 30px;
+    height: 80%;
+    position: relative;
+}
+
+.experience-description{
+    font-family: "Montserrat";
+    color: #999;
+    font-size: 16px;
+    margin-top : 16px;
+    text-align: justify;
+}
+
+.experience-title{
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 28px;
+}
 /*Check me out*/
 .check-me-out{
     height: 100%;
     display : flex;
+    background : #fbfbfb;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -277,7 +356,6 @@ body::-webkit-scrollbar{
 /*Footer*/
 .footer{
     height:50%;
-    background: #fbfbfb;
     display : flex;
     justify-content: center;
     align-items: center;
@@ -305,6 +383,12 @@ span{
 
 .chari-lake{
     background: linear-gradient(246.98deg, #242E87 0%, #74E6FF 100%);
+}
+
+/*Experience names*/
+.tss{
+    background: linear-gradient(107.72deg, #698EFF 0%, #A8EAFF 76.07%), linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+    /*    background-image: url('Images/tssbg.png');*/
 }
 
 /*Button Styles*/
@@ -349,28 +433,41 @@ span{
         margin: 50px;
         width: 500px;
     }
+    
+    .odd:nth-of-type(odd) { order: 0; }
+    
 }
 
 @media (max-width: 800px) {
-  .skills{
-      height: auto;
-  }
-  
-  .project{
-      height: 700px;
-      width : 300px;
-      margin-bottom: 50px;
-  }
-  
-  .projects-center{
-      margin: 50px;
-      width: 300px;
-  }
-  
-  .about-me-center{
-      left: 30%;
-      transform: translate(-22%, -50%);
-  }
+    .skills{
+        height: auto;
+    }
+    
+    .project{
+        height: 700px;
+        width : 300px;
+        margin-bottom: 50px;
+    }
+    
+    .projects-center{
+        margin: 50px;
+        width: 300px;
+    }
+    .experience{
+        height: auto;
+        width : 300px;
+        margin-bottom: 50px;
+    }
+    
+    .experience-center{
+        margin: 50px;
+        width: 300px;
+    }
+    
+    .about-me-center{
+        left: 30%;
+        transform: translate(-22%, -50%);
+    }
 }
 
 @media(max-width: 700px){
@@ -379,7 +476,7 @@ span{
     }
     
     .skillset {
-      flex-direction: column;
+        flex-direction: column;
     }
 }
 
@@ -428,4 +525,6 @@ span{
     -o-user-select: none;
     user-select: none;
 }
+
+.odd:nth-of-type(odd) { order: 1; }
 
