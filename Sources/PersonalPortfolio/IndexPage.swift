@@ -69,7 +69,14 @@ final class IndexPage <Site: Website> {
     
     func showIndex(index : Index, context : PublishingContext<Site>) -> HTML {
         HTML(
-            .head(for: index, on: context.site),
+            .head(
+                for: index,
+                on: context.site,
+                stylesheetPaths: [
+                    "Styles/styles.css",
+                    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+                ]
+            ),
             .body(
                 .div(
                     .class("snap-container"),
@@ -169,6 +176,9 @@ final class IndexPage <Site: Website> {
                             .div(
                                 .class("spacer")
                             ),//spacer
+                            .i(
+                                .class("fa fa-car")
+                            ),
                             .div(
                                 .class("project-container"),
                                 .forEach(projects, { (project) -> Node<HTML.BodyContext> in
