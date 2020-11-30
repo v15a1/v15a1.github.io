@@ -180,7 +180,7 @@ final class IndexPage <Site: Website> {
                                                 .class("project-thumbnail"),
                                                 .src(project[6])
                                             )//project-thumbnail
-                                        ),
+                                        ),//project-image-holder ...
                                         .div(
                                             .class("project-content"),
                                             .div(
@@ -189,11 +189,11 @@ final class IndexPage <Site: Website> {
                                                     .div(
                                                         .class("project-title"),
                                                         "\(project[1])"
-                                                    ),
+                                                    ),//project-title
                                                     .div(
                                                         .class("project-description"),
                                                         "\(project[2])"
-                                                    ),
+                                                    ),//project-description
                                                     .div(
                                                         .class("button-holder"),
                                                         .a(
@@ -201,9 +201,9 @@ final class IndexPage <Site: Website> {
                                                             .href(project[3]),
                                                             .target(HTMLAnchorTarget(rawValue: "_blank")!),
                                                             "\(project[5])"
-                                                        )
-                                                    )
-                                                )
+                                                        )//link-button
+                                                    )//button-holder
+                                                )//div
                                             )//project-content
                                         )//project
                                 )})//forEach - projects
@@ -224,7 +224,7 @@ final class IndexPage <Site: Website> {
                             .div(
                                 .class("content text-center"),
                                 "Click on the icons below to learn more about me"
-                            ),
+                            ),//content text-center
                             .div(
                                 .class("link-holder"),
                                 .forEach(checkMeOut, { (item) -> Node<HTML.BodyContext> in
@@ -249,9 +249,10 @@ final class IndexPage <Site: Website> {
                             .br(),
                             .a(
                                 .href("https://github.com/JohnSundell/Publish"),
-                                "Check out publish here"
-                            )
-                        )
+                                "Check out publish here",
+                                .target(HTMLAnchorTarget(rawValue: "_blank")!)
+                            )//a
+                        )//footer-content-holder
                     )//footer
                 )//snap-container
             )//body
