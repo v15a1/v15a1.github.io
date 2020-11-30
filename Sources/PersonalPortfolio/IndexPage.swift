@@ -11,6 +11,7 @@ final class IndexPage <Site: Website> {
     private let navbarItems : [String]!
     private let skills : [[String]]!
     private let projects : [[String]]!
+    private let checkMeOut : [[String]]!
     
     init() {
         navbarItems = [
@@ -57,6 +58,12 @@ final class IndexPage <Site: Website> {
              "Go to Website",
              "/images/charilake.png"
             ],
+        ]
+        
+        checkMeOut = [
+            ["/images/linkedin.png","https://www.linkedin.com/in/visalrajapakse99/"],
+            ["/images/github.png","https://github.com/v15a1"],
+            ["/images/twitter.png","https://twitter.com/v15a1"]
         ]
     }
     
@@ -203,10 +210,49 @@ final class IndexPage <Site: Website> {
                             )//project-container
                         )//projects-center
                     ),//projects
+                    .div(
+                        .class("check-me-out"),
+                        .div(
+                            .class("learn-more-holder"),
+                            .div(
+                                .class("title"),
+                                "Check out ____ ..."
+                            ),//About me title
+                            .div(
+                                .class("spacer")
+                            ),//spacer
+                            .div(
+                                .class("content text-center"),
+                                "Click on the icons below to learn more about me"
+                            ),
+                            .div(
+                                .class("link-holder"),
+                                .forEach(checkMeOut, { (item) -> Node<HTML.BodyContext> in
+                                    .a(
+                                        .href(item[1]),
+                                        .target(HTMLAnchorTarget(rawValue: "_blank")!),
+                                        .img(
+                                            .class("item-icon"),
+                                            .src(item[0])
+                                        )//item-icon
+                                    )//a
+                                })//forEach - checkMeOut
+                            )//link-holder
+                        )//div
+                    ),//check-me-out
                     .footer(
-                        .class("footer"),
-                        "Built with ❤️ using Publish Swift5"
-                    )
+                        .class("footer content"),
+                        .div(
+                            .class("footer-content-holder"),
+                            .text("Built with ❤️ using "),
+                            .span("Publish for Swift"),
+                            .br(),
+                            .a(
+                                .href("https://github.com/JohnSundell/Publish"),
+                                "Check out publish here"
+                            )
+                        )
+                    )//footer
                 )//snap-container
             )//body
         )//HTML
