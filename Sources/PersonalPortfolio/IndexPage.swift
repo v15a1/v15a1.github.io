@@ -93,7 +93,26 @@ final class IndexPage <Site: Website> {
                                     )//skill-name
                                 )//skill
                             })//forEach
-                        )//skillset
+                        ),//skillset
+                        .button(
+                            .onclick("moreSkillsTapped()"),
+                            .id("show-more-button"),
+                            .class("show-more"),
+                            "Show more"
+                        ),
+                        .div(
+                            .id("moreSkills"),
+                            .class("more-skills hidden"),
+                            .div(
+                                .class("marquee"),
+                                .ul(
+                                    .class("marquee-content"),
+                                    .forEach(otherSkills, { (skill) -> Node<HTML.ListContext> in
+                                        .li("\(skill)")
+                                    })//forEach - otherSkills
+                                )//marquee-content
+                            )//marquee
+                        )//more-skills
                     )//skill center
                 ),//skills
                 .div(
@@ -310,8 +329,35 @@ final class IndexPage <Site: Website> {
             "ThinkSmart Solution Private Limited is a leading end-to-end IT services company, serving business platform solutions for private and public sector clients from a diverse array of industries across Sri Lanka.",
             "Intern - iOS Development",
             "June 2020 - Present",
-            "/Images/tssbg.png"
+            "/Images/tss.png"
         ]
+    ]
+    
+    private let otherSkills = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "BootStrap",
+        "MaterialUI",
+        "NodeJS",
+        "Firebase",
+        "C",
+        "Figma",
+        "XD",
+        "Affinity Photo",
+        "Affinity Design",
+        "Photoshop",
+        "Lightroom",
+        "FinalCut Pro X",
+        "MongoDB",
+        "MySQL",
+        "NoSQL",
+        "Realm",
+        "GraphQL",
+        "SwiftUI",
+        "Drawing",
+        "Apollo",
     ]
     
     

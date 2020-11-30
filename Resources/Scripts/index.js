@@ -2,6 +2,34 @@ console.log("js loaded");
 var projects = document.getElementsByClassName("project-image-holder");
 var scrollLine = document.getElementById("scrollLine");
 var hero = document.getElementById("hero");
+var moreSkills = document.getElementById("moreSkills");
+var showMoreBtn = document.getElementById("show-more-button");
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+  "--marquee-elements-displayed"
+);
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+function moreSkillsTapped() {
+  if (moreSkills.classList.contains("hidden")) {
+    moreSkills.classList.remove("hidden");
+    moreSkills.classList.add("shown");
+    moreSkills.classList.add("scale-up-top");
+    showMoreBtn.innerHTML = "Hide";
+  } else {
+    moreSkills.classList.remove("shown");
+    moreSkills.classList.remove("scale-up-top");
+    moreSkills.classList.add("hidden");
+    showMoreBtn.innerHTML = "Show more";
+  }
+}
 
 function setProjectUI(width) {
   if (width <= 1200) {
