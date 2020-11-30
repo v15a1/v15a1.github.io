@@ -23,14 +23,14 @@ final class IndexPage <Site: Website> {
         ]
         
         skills = [
-            ["/images/swift.png", "Swift"],
-            ["/images/flutter.png", "Flutter"],
-            ["/images/react.png", "React"],
-            ["/images/android.png", "Android"],
-            ["/images/reactNative.png", "React Native"],
-            ["/images/git.png", "Git"],
-            ["/images/java.png", "Java"],
-            ["/images/python.png", "Python"],
+            ["/Images/swift.png", "Swift"],
+            ["/Images/flutter.png", "Flutter"],
+            ["/Images/react.png", "React"],
+            ["/Images/android.png", "Android"],
+            ["/Images/reactNative.png", "React Native"],
+            ["/Images/git.png", "Git"],
+            ["/Images/java.png", "Java"],
+            ["/Images/python.png", "Python"],
         ]
         
         projects = [
@@ -40,7 +40,7 @@ final class IndexPage <Site: Website> {
              "https://github.com/MrSupiri/speculo",
              "speculo-btn",
              "Go to Github",
-             "/images/speculo.png"
+             "/Images/speculo.png"
             ],
             ["recyclomedia",
              "Recyclomedia",
@@ -48,7 +48,7 @@ final class IndexPage <Site: Website> {
              "https://github.com/Iconicto/recyclomedia",
              "recyclomedia-btn",
              "Go to Github",
-             "/images/recyclomedia.png"
+             "/Images/recyclomedia.png"
             ],
             ["chari-lake",
              "Chari Lake",
@@ -56,14 +56,14 @@ final class IndexPage <Site: Website> {
              "https://www.charilakehotel.lk",
              "chari-lake-btn",
              "Go to Website",
-             "/images/charilake.png"
+             "/Images/charilake.png"
             ],
         ]
         
         checkMeOut = [
-            ["/images/linkedin.png","https://www.linkedin.com/in/visalrajapakse99/"],
-            ["/images/github.png","https://github.com/v15a1"],
-            ["/images/twitter.png","https://twitter.com/v15a1"]
+            ["/Images/linkedin.png","https://www.linkedin.com/in/visalrajapakse99/"],
+            ["/Images/github.png","https://github.com/v15a1"],
+            ["/Images/twitter.png","https://twitter.com/v15a1"]
         ]
     }
     
@@ -210,6 +210,9 @@ final class IndexPage <Site: Website> {
                             )//project-container
                         )//projects-center
                     ),//projects
+                    .p(
+                        .id("p")
+                    ),
                     .div(
                         .class("check-me-out"),
                         .div(
@@ -255,7 +258,12 @@ final class IndexPage <Site: Website> {
                         )//footer-content-holder
                     )//footer
                 )//snap-container
-            )//body
+            ),//body
+            .raw(
+                """
+                <script src="/Scripts/index.js"></script>
+                """
+            )
         )//HTML
     }
 }
