@@ -43,7 +43,7 @@ final class IndexPage <Site: Website> {
             ],
             ["recyclomedia",
              "Recyclomedia",
-             "Recyclopedia is a vintage inspired digital platform that aims to save the planet from the pollution which is the major threat to the functioning of earth. Built for Hack20 organized by Flutter Google",
+             "Recyclopedia is a vintage inspired digital platform that aims to save the planet from the pollution which is the major threat to the functioning of earth. Recyclomedia managed to rank within the top 20 worldwide",
              "https://github.com/Iconicto/recyclomedia",
              "recyclomedia-btn",
              "Go to Github",
