@@ -38,6 +38,10 @@ final class IndexPage <Site: Website> {
                             "SE Undergrad • iOS Developer • UI/UX enthusiast • Front-end enthusiast"
                         )//elevator-pitch
                     )//center
+                    ,.img(
+                        .class("hero-src"),
+                        .src("Images/visal.png")
+                    )
                 ),//hero-image
                 
                 //MARK:- About me
@@ -56,10 +60,14 @@ final class IndexPage <Site: Website> {
                                 .class("spacer")
                             ),//spacer
                             .div(
-                                "Hey! I'm Visal, a Software Engineering undergrad studying at the Informatics Institute of Technology in Colombo, Sri Lanka affliated with the University of Westminster, England. I show enthusiasm in Front End Development but find myself a little biased towards Mobile Application Development. My eventual career goal is to become a fully fledged and fully furnished iOS application developer. Apart from programming I occassionally draw. You could say I'm a programmer by day and a graphic designer/artist ", .span(
-                                    .class("strike"),
-                                    "by night"), " whenever I can afford the time :)"
-                            )//About me paragraph
+                                "Hello there! I'm Visal, a Software Engineering undergrad studying at the Informatics Institute of Technology in Colombo, Sri Lanka affliated with the University of Westminster, England. In the long run I hope to become a fully fledged and fully furnished iOS application developer.",
+                                .br(),
+                                .br(),
+                                "Personality wise, I am an introvert who once comfortable with a crowd can be loud and stirring. I make an excellent team player who is reliable, responsible, punctual and has constant drive to finish tasks assigned. I consider myself to be great at assessing products in the ideation stages which could benefit the idea to being well polished as I have proven myself and others to be a thinker outside the box.",
+                                .br(),.br(),
+                                "Apart from personality, I'm in fact more of a visual learner which explains my tendencies to work mostly with Front-End technologies that I find to be tasty eye candy. I am easily infatuated by almost anything involving graphics or art. In fact I would consider myself to be good at both which gives me the upper hand and quite the eye when it comes to UI/UX design, graphic designing and as mentioned, Front-End"
+                                
+                                )//About me paragraph
                         )//About me content
                     )//about-me-center
                 ),//about-me
@@ -293,7 +301,7 @@ final class IndexPage <Site: Website> {
     private let projects = [
         ["speculo",
          "Speculo",
-         "Speculo is an open-source platform that utilizes a Deep Convolution Inverse Graphics Network for indexing faces found in video footage, specifically for CCTV surveillance.",
+         "Speculo is a now open-source platform developed for our Software Development Group Project which utilizes a Deep Convolution Inverse Graphics Network for indexing faces found in video footage, specifically for CCTV surveillance to drastically reduce the time taken for footage analysis.",
          "https://github.com/MrSupiri/speculo",
          "speculo-btn",
          "Go to Github",
@@ -301,7 +309,7 @@ final class IndexPage <Site: Website> {
         ],
         ["recyclomedia",
          "Recyclomedia",
-         "Recyclopedia is a vintage inspired digital platform that aims to save the planet from the pollution which is the major threat to the functioning of earth. Recyclomedia managed to rank within the top 20 worldwide",
+         "Recyclopedia is a 'Old is Gold' inspired digital platform that aims to save the planet from the pollution which is the major threat to all life on earth. Recyclomedia is the byproduct of Hack20, a Flutter hackathon organized by Google. Recylomedia also managed to secure the rank of #20 Worldwide.",
          "https://github.com/Iconicto/recyclomedia",
          "recyclomedia-btn",
          "Go to Github",
@@ -309,7 +317,7 @@ final class IndexPage <Site: Website> {
         ],
         ["chari-lake",
          "Chari Lake",
-         "Recyclopedia is a vintage inspired digital platform that aims to save the planet from the pollution which is the major threat to the functioning of earth. Built for Hack20 organized by Flutter Google",
+         "A website revamp for Chari Lake, a perfect getaway, a soothing ambience, romantic setting overlooking the beautiful koggala lake in Galle, Sri Lanka. ",
          "https://www.charilakehotel.lk",
          "chari-lake-btn",
          "Go to Website",
@@ -326,7 +334,7 @@ final class IndexPage <Site: Website> {
     private let experience = [
         [
             "ThinkSmart Solutions",
-            "ThinkSmart Solution Private Limited is a leading end-to-end IT services company, serving business platform solutions for private and public sector clients from a diverse array of industries across Sri Lanka.",
+            "Here, I currently develop some components and pages of the company's flagship service 'EatMeal First' using Swift5 and GraphQL Apollo.",
             "Intern - iOS Development",
             "June 2020 - Present",
             "/Images/tss.png"
