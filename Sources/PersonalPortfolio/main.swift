@@ -18,7 +18,7 @@ import Foundation
      var name = "Visal Rajapakse"
      var description = ""
      var language: Language { .english }
-     var imagePath: Path? { nil }
+     var imagePath: Path? { "Images/logo" }
  }
 
  private extension Node where Context == HTML.BodyContext {
