@@ -60,13 +60,12 @@ final class IndexPage <Site: Website> {
                                 .class("spacer")
                             ),//spacer
                             .div(
-                                "Hello there! I'm Visal, a Software Engineering undergrad studying at the Informatics Institute of Technology in Colombo, Sri Lanka affliated with the University of Westminster, England. In the long run I hope to become a fully fledged and fully furnished iOS application developer.",
+                                "Hello there! I'm Visal, a Software Engineering undergrad studying at the Informatics Institute of Technology in Colombo, Sri Lanka affliated with the University of Westminster, England. I'm pursuing the path of mobile application development to become a proficient iOS developer in the long run.",
                                 .br(),
                                 .br(),
                                 "Personality wise, I am an introvert who once comfortable with a crowd can be loud and stirring. I make an excellent team player who is reliable, responsible, punctual and has constant drive to finish tasks assigned. I consider myself to be great at assessing products in the ideation stages which could benefit the idea to being well polished as I have proven myself and others to be a thinker outside the box.",
                                 .br(),.br(),
-                                "Apart from personality, I'm in fact more of a visual learner which explains my tendencies to work mostly with Front-End technologies that I find to be tasty eye candy. I am easily infatuated by almost anything involving graphics or art. In fact I would consider myself to be good at both which gives me the upper hand and quite the eye when it comes to UI/UX design, graphic designing and as mentioned, Front-End"
-                                
+                                "To add things in, I'm in fact more of a visual learner which explains my tendencies to work mostly with Front-End technologies that I find to be \"tasty eye candy\". I am easily infatuated by almost anything involving graphics or drawings. In fact I would consider myself to be good at both which gives me the upper hand and quite the eye when it comes to UI/UX design, graphic designing and as mentioned, Front-End"
                                 )//About me paragraph
                         )//About me content
                     )//about-me-center
