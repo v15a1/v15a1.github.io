@@ -60,7 +60,6 @@ function updateScrollLine() {
     document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
 
-  console.log(scrolled);
   if (scrolled > ((hero.clientHeight - 8) / height) * 100) {
     scrollLine.classList.remove("solid");
     scrollLine.classList.add("gradient");
@@ -72,7 +71,7 @@ function updateScrollLine() {
 }
 
 window.addEventListener("resize", setUI);
-window.onscroll = function() {
+window.onscroll = function () {
   updateScrollLine();
 };
 
