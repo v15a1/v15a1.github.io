@@ -182,7 +182,7 @@ body::-webkit-scrollbar {
 }
 
 .project {
-  min-height: 400px;
+  min-height: 300px;
   border-radius: 20px;
   background: white;
   display: flex;
@@ -533,7 +533,7 @@ span {
 
   .project {
     min-height: 800px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 50px;
   }
 
