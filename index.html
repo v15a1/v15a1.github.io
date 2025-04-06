@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visal's iOS Developer Portfolio</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Lora Font & Define Font Class -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+      html {
+        scroll-behavior: smooth; /* Add smooth scrolling */
+      }
+
+      .font-lora {
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .lora-bold {
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+      /* Basic transition for mobile menu */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      #mobile-menu.hidden {
+        transform: translateX(-100%);
+      }
+    </style>
+</head>
+<body class="bg-white font-lora text-gray-800">
+
+    <!-- Header/Navigation Section (NOW STICKY & RESPONSIVE) -->
+    <!-- Added: relative positioning for mobile menu context -->
+    <header class="py-3 sticky top-0 bg-white z-20 shadow-sm relative">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center"> <!-- Wider container -->
+            <h1 class="text-2xl lora-bold">Visal Rajapakse</h1>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="#featured-enki" class="text-gray-600 hover:text-gray-900 transition-colors">Featured</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition-colors">Ongoing Projects</a>
+                <a href="#experience" class="text-gray-600 hover:text-gray-900 transition-colors">Experience</a>
+                <a href="#more-about" class="text-gray-600 hover:text-gray-900 transition-colors">More</a>
+                <a href="./static/Visal_Rajapakse_Resume-2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="underline text-gray-600 hover:text-gray-900 transition-colors">
+                     Resume
+                 </a>
+            </nav>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button id="menu-button" aria-label="Open Menu" aria-expanded="false" aria-controls="mobile-menu" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Initially Hidden) -->
+        <!-- Adjusted positioning: fixed, full height, left side -->
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 w-64 bg-white shadow-lg p-6 transform -translate-x-full md:hidden z-30">
+             <!-- Close Button -->
+            <button id="close-menu-button" aria-label="Close Menu" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="mt-10 flex flex-col space-y-4">
+                 <a href="#about" class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link">About</a>
+                 <a href="#featured-enki" class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link">Featured</a>
+                 <a href="#projects" class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link">Projects</a>
+                 <a href="#experience" class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link">Experience</a>
+                 <a href="#more-about" class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link">More</a>
+            </nav>
+        </div>
+         <!-- Overlay for closing menu when clicking outside -->
+         <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden md:hidden"></div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+
+        <!-- Section 1: Introduction (Text-heavy, constrained width - Original Version) -->
+        <section id="about" class="py-12 md:py-20 pt-16 md:pt-24"> <!-- Added padding-top for sticky header -->
+            <!-- ... (keep content the same) ... -->
+            <div class="max-w-3xl mx-auto px-4">
+                <div class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0 mb-8 md:mb-0 md:top-28">
+                    <img src="./static/aboutMeProfile.jpg"
+                         alt="Visal Rajapakse - Profile Picture"
+                         class="rounded-lg w-48 aspect-square object-cover mx-auto mb-4">
+                </div>
+                <h2 class="text-3xl md:text-4xl lora-bold mb-6">Hi, I'm Visal 👋🏽</h2>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    I'm a passionate iOS Developer hailing from the pearl of the Indian Ocean - Sri Lanka. With nearly 5 years of experience across corporate environments, startups, and freelance projects, I focus on creating beautiful, intuitive, and high-performance mobile applications for the Apple ecosystem. I thrive on R&D challenges, constantly exploring Apple's latest technologies to build exceptional user experiences.
+                </p>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    My technical toolkit includes SwiftUI, UIKit, CoreData, Firebase, and various API integrations. Beyond development, I'm deeply committed to knowledge sharing – contributing regularly on Stack Overflow, mentoring students, and publishing research in recognized journals. This balance of technical expertise, innovation, and community engagement defines my approach to software development.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <!-- GitHub Pill -->
+                    <a href="https://github.com/v15a1" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                       GitHub
+                    </a>
+                    <!-- Stack Overflow Pill -->
+                    <a href="https://stackoverflow.com/users/10883380/visal-rajapakse" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                        Stack Overflow
+                    </a>
+                    <!-- LinkedIn Pill -->
+                    <a href="https://linkedin.com/in/visalrajapakse99" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                       LinkedIn
+                    </a>
+                    <!-- Email Pill (Optional) -->
+                    <a href="mailto:visalrajapakse@gmail.com"
+                       class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                       Email Me
+                    </a>
+               </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Featured Project (Enki - ADDED ID) -->
+        <section id="featured-enki" class="bg-gray-100 relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28"> <!-- Added padding-top -->
+            <!-- ... (keep content the same) ... -->
+             <!-- Container -->
+             <div class="max-w-6xl mx-auto px-4">
+                 <!-- Grid or Flex container for two columns -->
+                 <div class="flex flex-col md:flex-row gap-10 lg:gap-16 items-center">
+
+                     <!-- Left Column: Text Info, Tech Pills & Buttons -->
+                     <div class="w-full md:w-1/2 lg:w-5/12 text-center md:text-left">
+                         <h5 class="text-sm text-gray-500 lora-bold mb-2">[Indie App]</h5>
+                         <h3 class="text-3xl md:text-4xl lora-bold mb-4">🗒️ Enki - Sticky Notes for the internet age</h3>
+                         <p class="text-lg text-gray-700 leading-relaxed mb-6"> <!-- Reduced mb slightly -->
+                            A zero-friction bookmarking solution that serves as sticky notes for the internet age, allowing users to instantly save and effortlessly rediscover content using conversational AI.
+                          </p>
+                          <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                            My responsibilities: Led end-to-end product development from design to deployment, including feature integration and implementation. Spearheaded marketing initiatives that drove user acquisition to 1,000+ users within days of launch.
+                          </p>
+
+                         <!-- Technology Pills -->
+                         <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2">
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Swift</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">SwiftUI</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">CoreData</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">CryptoKit</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Async/Await</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Google Gemini</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Xcode Cloud</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Firebase</span>
+                             <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Figma</span>
+                             <!-- Add more technologies as needed -->
+                         </div>
+
+                         <!-- Buttons -->
+                         <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                             <a href="https://apps.apple.com/app/save-bookmark-links-enki/id6739212192" target="_blank" rel="noopener noreferrer"
+                                class="inline-block bg-black text-white font-medium text-sm px-6 py-3 rounded-lg shadow hover:bg-yellow-700 transition-colors">
+                                 View on App Store
+                             </a>
+                             <a href="https://enki.tallisa.dev/" target="_blank" rel="noopener noreferrer"
+                                class="inline-block bg-white text-gray-800 font-medium text-sm px-6 py-3 rounded-lg shadow hover:bg-gray-200 border border-gray-300 transition-colors">
+                                 Learn More
+                             </a>
+                         </div>
+                     </div>
+
+                     <!-- Right Column: App Screenshot(s) -->
+                     <!-- Adjusted max-w-* for larger image -->
+                     <div class="w-full md:w-1/2 lg:w-7/12 mt-10 md:mt-0">
+                         <img src="./static/enkiScreenshots.png"
+                              alt="App Screenshot for Enki"
+                              class="rounded-xl mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                     </div>
+
+                 </div>
+             </div>
+        </section>
+
+        <!-- Section 2b: Featured Project (Glideshow - ADDED ID) -->
+        <section id="featured-glideshow" class="relative overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28"> <!-- Added padding-top -->
+            <!-- ... (keep content the same) ... -->
+             <!-- Container -->
+             <div class="max-w-6xl mx-auto px-4">
+                 <!-- Grid or Flex container for two columns -->
+                 <div class="flex flex-col md:flex-row gap-10 lg:gap-16 items-center">
+
+                     <div class="w-full md:w-1/2 lg:w-7/12 mt-10 md:mt-0 md:order-last"> <!-- Order last on md+ -->
+                         <img src="./static/glideshow.gif"
+                              alt="App Screenshot for Glideshow"
+                              class="rounded-xl mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                     </div>
+                     <!-- Left Column: Text Info, Tech Pills & Buttons -->
+                     <div class="w-full md:w-1/2 lg:w-5/12 text-center md:text-left md:order-first"> <!-- Order first on md+ -->
+                         <h5 class="text-sm text-gray-500 lora-bold mb-2">[Pet Project]</h5>
+                         <h3 class="text-3xl md:text-4xl lora-bold mb-4">💨 Glideshow</h3>
+                         <p class="text-lg text-gray-700 leading-relaxed mb-6"> <!-- Reduced mb slightly -->
+                             Inspired by the slideshow feature in the <a href="https://wolt.com" class="underline">Wolt iOS app</a>, I built a reusable slideshow library for UIKit during my internship-just for fun and to explore custom UI development.</p>
+
+                         <!-- Technology Pills -->
+                         <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2">
+                             <span class="inline-block bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-1 rounded-full">Swift</span>
+                             <span class="inline-block bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">UIKit</span>
+                             <span class="inline-block bg-red-100 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">CocoaPods</span>
+                             <!-- Add more technologies as needed -->
+                         </div>
+
+                         <!-- Buttons -->
+                         <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                             <a href="https://github.com/v15a1/Glideshow" target="_blank" rel="noopener noreferrer"
+                                class="inline-block bg-black text-white font-medium text-sm px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition-colors">
+                                 View on Github
+                             </a>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+        </section>
+
+        <!-- Section 3: Projects (The rest of your page follows) -->
+        <section id="projects" class="py-12 md:py-20 bg-gray-100 pt-16 md:pt-24"> <!-- Added padding-top -->
+           <!-- ... (keep content the same) ... -->
+           <div class="max-w-3xl mx-auto px-4 mb-8">
+                <h2 class="text-3xl md:text-4xl lora-bold mb-4">⏱️ Projects in Motion</h2>
+                <p class="text-lg md:text-xl leading-relaxed">
+                    Here are some of the other projects I'm working on.
+                </p>
+            </div>
+            <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-xl p-6 bg-blue-100">
+                    <div class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0 mb-8 md:mb-0 md:top-28">
+                        <img src="./static/badgerAppIcon.png"
+                             alt="Badger App"
+                             class="rounded-lg w-48 aspect-square object-cover mx-auto mb-4">
+                    </div>
+                    <h3 class="text-2xl lora-bold mb-3">Badger Reminders</h3>
+                    <h5 class="text-xs lora-bold mb-2 text-blue-400">[iOS]</h5>
+                    <p class="mb-4 text-gray-700">One reminder may not cut it for most of us. Badger is a to-do/reminder app that will intelligently and persistently "badger" you to complete a task</p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2">
+                        <span class="inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">SwiftUI</span>
+                        <span class="inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">SwiftData</span>
+                        <span class="inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full">EventKit</span>
+                    </div>
+                </div>
+                <div class="rounded-xl p-6 bg-pink-200">
+                    <div class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0 mb-8 md:mb-0 md:top-28">
+                        <img src="./static/noFaceAppIcon.png"
+                             alt="NoFace - AI Short form video generator"
+                             class="rounded-lg w-48 aspect-square object-cover mx-auto mb-4">
+                    </div>
+                    <h3 class="text-2xl lora-bold mb-3">NoFace - AI video generator</h3>
+                    <h5 class="text-xs text-gray-500 lora-bold mb-2 text-pink-400">[Web]</h5>
+                    <p class="mb-4 text-gray-700">Developing the frontend to generate AI generate short form video content from video transcript generation all the way to video upload to multiple platforms (YouTube, TikTok, Instagram)</p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2">
+                        <span class="inline-block bg-pink-300 text-pink-800 text-xs font-medium px-2.5 py-1 rounded-full">NextJS</span>
+                        <span class="inline-block bg-pink-300 text-pink-800 text-xs font-medium px-2.5 py-1 rounded-full">TikTok API</span>
+                        <span class="inline-block bg-pink-300 text-pink-800 text-xs font-medium px-2.5 py-1 rounded-full">Meta API</span>
+                        <span class="inline-block bg-pink-300 text-pink-800 text-xs font-medium px-2.5 py-1 rounded-full">YouTube API</span>
+                    </div>
+                </div>
+                <div class="rounded-xl p-6 bg-yellow-100">
+                    <h3 class="text-2xl lora-bold mb-3">Blurvid</h3>
+                    <h5 class="text-xs text-yellow-700 lora-bold mb-2 text-pink-400">[iOS]</h5>
+                    <p class="mb-4 text-gray-700">Developing a lower shutter speed video recording app to get natural light trailing effect for videos at night to provide a nostalgic, but high resolution videos</p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2">
+                        <span class="inline-block bg-yellow-300 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">CoreImage</span>
+                        <span class="inline-block bg-yellow-300 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">Metal</span>
+                        <span class="inline-block bg-yellow-300 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">SwiftUI</span>
+                        <span class="inline-block bg-yellow-300 text-yellow-800 text-xs font-medium px-2.5 py-1 rounded-full">UIKit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-12 md:py-20 bg-white pt-16 md:pt-24"> <!-- Added padding-top -->
+            <!-- ... (keep content the same) ... -->
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl lora-bold mb-8 md:mb-12 text-center">Experience</h2>
+
+                <!-- Experience Entry 1 -->
+                <div class="mb-8 md:mb-10">
+                    <h3 class="text-xl lora-bold mb-1">iOS Developer</h3>
+                    <p class="text-lg text-gray-700 mb-1">PickMe Sri Lanka</p>
+                    <p class="text-sm text-gray-500 mb-3">March 2025 - Present</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Currently, as an iOS Developer at PickMe, I'm taking the lead on significant feature development. I spearheaded the implementation of a crucial backend-driven forms system designed to enable dynamic user sign-up flows across both Android and iOS platforms, aiming to streamline the user onboarding experience. Alongside this, I've been instrumental in the modernization of the Driver app, contributing key components and enhancements using SwiftUI to improve its interface and overall performance.
+                    </p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4">
+                        <span class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">SwiftUI</span>
+                        <span class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">Server-driven Forms</span>
+                        <span class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">API Integration</span>
+                        <span class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full">Location Services</span>
+                    </div>
+                </div>
+
+                <!-- Experience Entry 2 -->
+                <div class="mb-8 md:mb-10">
+                    <h3 class="text-xl lora-bold mb-1">Software Engineer I (iOS)</h3>
+                    <p class="text-lg text-gray-700 mb-1">Circles.Life Singapore</p>
+                    <p class="text-sm text-gray-500 mb-3">July 2022 - April 2024</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        As a Software Engineer I at Circles.Life in Singapore, I played a key role in modernizing the iOS application by leading the migration of over 10 core legacy Objective-C/UIKit views to Swift using both UIKit and SwiftUI. I also contributed to improving code reusability by creating a dedicated SwiftUI library for JSON-based text styling. Beyond feature development, I took ownership of managing the Bitrise CI/CD pipelines, specifically tackling challenges with non-Rosetta Xcode stacks, and gained valuable leadership experience by mentoring a junior iOS intern for a year.
+                    </p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4">
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">Obj-C</span>
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">UIKit</span>
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">Go</span>
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">Server-driven UI</span>
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">Bitrise</span>
+                        <span class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full">Cocoapods</span>
+                    </div>
+                </div>
+
+                <!-- Experience Entry 3 -->
+                <div class="mb-8 md:mb-10">
+                    <h3 class="text-xl lora-bold mb-1">Intern/Associate iOS Developer</h3>
+                    <p class="text-lg text-gray-700 mb-1">ThinkSmart Solutions</p>
+                    <p class="text-sm text-gray-500 mb-3">June 2020 -  August 2021</p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Assisted senior developers in building and testing iOS app components. Gained hands-on experience with Xcode, Interface Builder, and version control (Git). Created Glideshow, a UIKit Slideshow library inspired by the Wolt App. Maintained, Fixed bugs and contributed to UI implementation.
+                    </p>
+                    <div class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4">
+                        <span class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">UIKit</span>
+                        <span class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">GraphQL</span>
+                        <span class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full">Cocoapods</span>
+                    </div>
+                </div>
+                 <!-- Add more entries as needed -->
+
+            </div>
+        </section>
+
+        <!-- RENAMED ID from 'about' to 'more-about' -->
+        <section id="more-about" class="py-12 md:py-20 bg-gray-100 pt-16 md:pt-24"> <!-- Added padding-top -->
+            <!-- ... (keep content the same) ... -->
+            <div class="max-w-3xl mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl lora-bold mb-6">More About me, my interests and hobbies</h2>
+                <h4 class="text-3xl md:text-xl lora-bold mb-6">Technological 💻</h4>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    Apart from being clinically obsessed with Apple technologies, I am also clinically obsessed with planes and the engineering behind how planes work. I could go all day about both of them. After hours, I occasionally try to illustrate—meaning, I often create quirky app icons for both mine, and other clients' apps—which I enjoy very much [<a href="https://x.com/dieselveasel/status/1895852041169449067" class="underline">🔗 Badger</a>]. My okay-ish eye for design has also helped me make cool launch videos for my products. If that's something you are interested in, hit me up [<a href="https://x.com/cmdFMylife/status/1883375294175936580" class="underline">🔗 Enki Launch Video</a>][<a href="https://x.com/dieselveasel/status/1891487684016611615" class="underline">🔗 Badger</a>]
+                </p>
+                <h4 class="text-3xl md:text-xl lora-bold mb-6">Educational 📚</h4>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    I graduated with a Bachelors Degree in Computer Science back in 2022 with a First Class. If the technological section didn't scream "nerd", I bet this section just might. In College, I actively participated in hackathons, and most notably, ranked <a class="underline" href="https://flutterhackathon.com/#/">Top 20 in a Global Flutter Hackathon (Hack 2020)</a> organized by Google. During my final year, I also got the fantastic opportunity to be a student tutor for the iOS Development module. Another momentous achievement was authoring and publishing a survey paper titled <a href="https://dl.acm.org/doi/abs/10.1145/3583683" class="underline">"Intelligence at the extreme edge: A survey on reformable TinyML"</a> in one of Computer Science's most prestigious journals - ACM Computing Surveys.
+                </p>
+                <h4 class="text-3xl md:text-xl lora-bold mb-6">Community 🙆🏽‍♂️</h4>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    I'm passionate about contributing to the tech community and helping others grow. This passion has led me to mentor over 250 undergraduates through the <a href="https://sefglobal.org/scholarx/2023/" class="underline">ScholarX</a> program, teach iOS Development as a Lecturer, and mentor students through their Final Year Research Projects. I also actively share knowledge online as a <a href="https://stackoverflow.com/users/10883380/visal-rajapakse" class="underline">Contributor</a> on Stack Overflow within the iOS, Swift, and SwiftUI tags. Whether through mentorship, teaching, answering questions, or contributing to open-source projects, I believe in the power of collaboration and shared learning within the developer ecosystem.
+                </p>
+                <h4 class="text-3xl md:text-xl lora-bold mb-6">Activities 🏊🏽</h4>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    When I get tired of being a couch potato, I do enjoy going out for a run. Running aside, I love (almost all) outdoor activities. It could be for a walk in the park, go for a hike, walk on the beach, barbeques, you name it, count me in.
+                </p>
+                <h4 class="text-3xl md:text-xl lora-bold mb-6">Meme-ology 🥴</h4>
+                <p class="text-lg md:text-base mb-4 leading-relaxed">
+                    I'll admit that sometimes I prefer to be a couch potato, doom scrolling media on X and Reddit. Because of this, naturally, I have a great affinity towards memes and meme culture.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 mt-12 md:mt-20"> <!-- Added top border and margin -->
+        <div class="max-w-3xl mx-auto py-8 px-4 text-center md:text-left"> <!-- Increased padding, added px -->
+
+            <div class="flex flex-wrap gap-3 justify-center md:justify-start mb-4">
+                <!-- GitHub Pill -->
+                <a href="https://github.com/v15a1" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                   GitHub
+                </a>
+                <!-- Stack Overflow Pill -->
+                <a href="https://stackoverflow.com/users/10883380/visal-rajapakse" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                    Stack Overflow
+                </a>
+                <!-- LinkedIn Pill -->
+                <a href="https://linkedin.com/in/visalrajapakse99" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                   LinkedIn
+                </a>
+                <!-- Email Pill (Optional) -->
+                <a href="mailto:visalrajapakse@gmail.com"
+                   class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors">
+                   Email Me
+                </a>
+           </div>
+            <p class="text-sm text-gray-500 mt-4">© <span id="current-year"></span> Visal Rajapakse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link'); // Get all links in mobile menu
+
+        function openMenu() {
+            mobileMenu.classList.remove('hidden', '-translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            menuOverlay.classList.remove('hidden');
+            menuButton.setAttribute('aria-expanded', 'true');
+            // Optional: trap focus within the menu
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('-translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+            // Add hidden after transition duration (300ms)
+            setTimeout(() => {
+                 mobileMenu.classList.add('hidden');
+            }, 300);
+            menuOverlay.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        menuButton.addEventListener('click', openMenu);
+        closeMenuButton.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // Add event listeners to each link to close the menu on click
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+         // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: Close menu on ESC key press
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMenu();
+            }
+        });
+
+        // Adjust section padding top based on header height dynamically
+        // function adjustPadding() {
+        //     const headerHeight = document.querySelector('header').offsetHeight;
+        //     const sections = document.querySelectorAll('main section[id]');
+        //     sections.forEach(section => {
+        //         section.style.paddingTop = `${headerHeight + 48}px`; // Add some extra space (48px = py-12 approx)
+        //     });
+        //     // Special adjustment for first section if needed
+        //     // document.getElementById('about').style.paddingTop = `${headerHeight + 80}px`; // md:py-20 approx
+        // }
+
+        // // Run on load and resize
+        // window.addEventListener('load', adjustPadding);
+        // window.addEventListener('resize', adjustPadding);
+        // Note: Dynamic padding adjustment can sometimes cause layout shifts.
+        // The fixed padding added via Tailwind classes is often sufficient and more stable.
+        // Uncomment the adjustPadding function and listeners if you need more precise dynamic adjustment.
+
+    </script>
+
+</body>
+</html>
