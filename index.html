@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Visal's iOS Developer Portfolio</title>
+        <title>Visal's Developer Portfolio</title>
         <!-- Include Tailwind CSS via CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- Import Lora Font & Define Font Class -->
@@ -53,6 +53,11 @@
                         >About</a
                     >
                     <a
+                        href="#experience"
+                        class="text-gray-600 hover:text-gray-900 transition-colors"
+                        >Experience</a
+                    >
+                    <a
                         href="#featured-enki"
                         class="text-gray-600 hover:text-gray-900 transition-colors"
                         >Featured</a
@@ -61,11 +66,6 @@
                         href="#projects"
                         class="text-gray-600 hover:text-gray-900 transition-colors"
                         >Ongoing Projects</a
-                    >
-                    <a
-                        href="#experience"
-                        class="text-gray-600 hover:text-gray-900 transition-colors"
-                        >Experience</a
                     >
                     <a
                         href="#more-about"
@@ -143,6 +143,11 @@
                         >About</a
                     >
                     <a
+                        href="#experience"
+                        class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link"
+                        >Experience</a
+                    >
+                    <a
                         href="#featured-enki"
                         class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link"
                         >Featured</a
@@ -151,11 +156,6 @@
                         href="#projects"
                         class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link"
                         >Projects</a
-                    >
-                    <a
-                        href="#experience"
-                        class="block py-2 text-gray-700 hover:text-gray-900 transition-colors mobile-menu-link"
-                        >Experience</a
                     >
                     <a
                         href="#more-about"
@@ -178,39 +178,51 @@
                 <!-- Added padding-top for sticky header -->
                 <!-- ... (keep content the same) ... -->
                 <div class="max-w-3xl mx-auto px-4">
-                    <div
-                        class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0 mb-8 md:mb-0 md:top-28"
-                    >
-                        <img
-                            src="./static/aboutMeProfile.jpg"
-                            alt="Visal Rajapakse - Profile Picture"
-                            class="rounded-lg w-48 aspect-square object-cover mx-auto mb-4"
-                        />
-                    </div>
-                    <h2 class="text-3xl md:text-4xl lora-bold mb-6">
-                        Hi, I'm Visal 👋🏽
+                    <h2 class="text-3xl md:text-4xl lora-bold">
+                        Hello there, I'm Visal 👋🏽
                     </h2>
+                    <h5 class="text-sm md:text-lg text-gray-500 lora mb-6">
+                        (Vi-sah-l)
+                    </h5>
+                    <!--BIO-->
+                    <div class="p-4 bg-gray-200 rounded-lg mb-4">
+                        <div class="flex flex-row">
+                            <p
+                                class="text-lg md:text-base leading-relaxed lora-bold"
+                            >
+                                TL;DR
+                            </p>
+                        </div>
+                        <p
+                            class="text-lg md:text-base leading-relaxed lora-semibold"
+                        >
+                            I accidentally bricked my Mom's Samsung Galaxy SII
+                            trying to flash CyanogenMod onto it back in 2013.
+                            Had to mess around a lot to fix it. I low-key fell
+                            in love with breaking things, but fell even harder
+                            for fixing things.
+                        </p>
+                    </div>
                     <p class="text-lg md:text-base mb-4 leading-relaxed">
-                        I'm a passionate iOS Developer hailing from the pearl of
-                        the Indian Ocean - Sri Lanka. With nearly 5 years of
-                        experience across corporate environments, startups, and
-                        freelance projects, I focus on creating beautiful,
-                        intuitive, and high-performance mobile applications for
-                        the Apple ecosystem. I thrive on R&D challenges,
-                        constantly exploring Apple's latest technologies to
-                        build exceptional user experiences.
+                        That little disaster kicked off a habit of tearing
+                        things apart just to understand how they work. These
+                        days I do it professionally. I'm a developer from Sri
+                        Lanka, mostly building for the Apple ecosystem. Nearly
+                        five years in across startups, corporate gigs, and
+                        freelance work. SwiftUI, UIKit, CoreData, whatever gets
+                        the job done.
                     </p>
                     <p class="text-lg md:text-base mb-4 leading-relaxed">
-                        My technical toolkit includes SwiftUI, UIKit, CoreData,
-                        Firebase, and various API integrations. Beyond
-                        development, I'm deeply committed to knowledge sharing –
-                        contributing regularly on Stack Overflow, mentoring
-                        students, and publishing research in recognized
-                        journals. This balance of technical expertise,
-                        innovation, and community engagement defines my approach
-                        to software development.
+                        Outside of work I hang around Stack Overflow answering
+                        iOS questions, mentor students when I can, and
+                        occasionally publish research papers. I also like
+                        building side projects that probably didn't need to
+                        exist but were fun to make anyway.
                     </p>
-                    <div class="flex flex-wrap gap-3">
+                    <!--END BIO-->
+
+                    <!--ADD A NEW PAGE REDIRECT THAT WILL TAKE THE USER TO THE LONGER BIO-->
+                    <div class="flex flex-wrap gap-3 pt-6">
                         <!-- GitHub Pill -->
                         <a
                             href="https://github.com/v15a1"
@@ -227,7 +239,7 @@
                             rel="noopener noreferrer"
                             class="inline-flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium px-3 py-1 rounded-full transition-colors"
                         >
-                            Stack Overflow
+                            Stack Overflow (Yes, I'm that old)
                         </a>
                         <!-- LinkedIn Pill -->
                         <a
@@ -246,6 +258,194 @@
                             Email Me
                         </a>
                     </div>
+                </div>
+            </section>
+
+            <section
+                id="experience"
+                class="py-12 md:py-20 bg-white pt-16 md:pt-24"
+            >
+                <!-- Added padding-top -->
+                <!-- ... (keep content the same) ... -->
+                <div class="max-w-3xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lora-bold mb-8 md:mb-12 text-center"
+                    >
+                        Experience
+                    </h2>
+
+                    <div class="mb-8 md:mb-10">
+                        <h3 class="text-xl lora-bold mb-1">
+                            Software (Full Stack) Developer
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-1">
+                            WSO2, Sri Lanka
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                            June 2025 - Present
+                        </p>
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            Currently, as an Full Stack Engineer at WSO2, I'm
+                            responsible for maintaining and improving the WSO2
+                            Superapp. Since joining, a few noteworthy
+                            improvements are enabling Push Notifications for the
+                            app, implementing and phasing out the use of PIIs
+                            within our services and app, and the development of
+                            a WSO2Con Microapp. More to come xD
+                        </p>
+                        <div
+                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
+                        >
+                            <span
+                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
+                                >React Native</span
+                            >
+                            <span
+                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Go Lang</span
+                            >
+                            <span
+                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Expo</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Experience Entry 1 -->
+                    <div class="mb-8 md:mb-10">
+                        <h3 class="text-xl lora-bold mb-1">iOS Developer</h3>
+                        <p class="text-lg text-gray-700 mb-1">
+                            PickMe Sri Lanka
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                            March 2025 - June 2025
+                        </p>
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            As an iOS Developer at PickMe, my proudest
+                            contribution is spearheading the design and
+                            implementation of a crucial backend-driven form
+                            system enabling multi-tenant user sign-up flows
+                            across both Android and iOS platforms which aimed to
+                            streamline the user onboarding experience. Alongside
+                            this, I've been instrumental in the modernization of
+                            the Driver app, contributing key components and
+                            enhancements using SwiftUI to improve its interface
+                            and overall performance.
+                        </p>
+                        <div
+                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
+                        >
+                            <span
+                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >SwiftUI</span
+                            >
+                            <span
+                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Server-driven Forms</span
+                            >
+                            <span
+                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >API Integration</span
+                            >
+                            <span
+                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Location Services</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Experience Entry 2 -->
+                    <div class="mb-8 md:mb-10">
+                        <h3 class="text-xl lora-bold mb-1">
+                            Software Engineer I (iOS)
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-1">
+                            Circles.Life Singapore
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                            July 2022 - April 2024
+                        </p>
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            As a Software Engineer I at Circles.Life in
+                            Singapore, I played a key role in modernizing the
+                            iOS application by leading the migration of over 10
+                            core legacy Objective-C/UIKit views to Swift using
+                            both UIKit and SwiftUI. I also contributed to
+                            improving code reusability by creating a dedicated
+                            SwiftUI library for JSON-based text styling. Beyond
+                            feature development, I took ownership of managing
+                            the Bitrise CI/CD pipelines, specifically tackling
+                            challenges with non-Rosetta Xcode stacks, and gained
+                            valuable leadership experience by mentoring a junior
+                            iOS intern for a year.
+                        </p>
+                        <div
+                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
+                        >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Obj-C</span
+                            >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >UIKit</span
+                            >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Go</span
+                            >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Server-driven UI</span
+                            >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Bitrise</span
+                            >
+                            <span
+                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Cocoapods</span
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Experience Entry 3 -->
+                    <div class="mb-8 md:mb-10">
+                        <h3 class="text-xl lora-bold mb-1">
+                            Intern/Associate iOS Developer
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-1">
+                            ThinkSmart Solutions
+                        </p>
+                        <p class="text-sm text-gray-500 mb-3">
+                            June 2020 - August 2021
+                        </p>
+                        <p class="text-base text-gray-600 leading-relaxed">
+                            Assisted senior developers in building and testing
+                            iOS app components. Gained hands-on experience with
+                            Xcode, Interface Builder, and version control (Git).
+                            Created Glideshow, a UIKit Slideshow library
+                            inspired by the Wolt App. Maintained, Fixed bugs and
+                            contributed to UI implementation.
+                        </p>
+                        <div
+                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
+                        >
+                            <span
+                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >UIKit</span
+                            >
+                            <span
+                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >GraphQL</span
+                            >
+                            <span
+                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
+                                >Cocoapods</span
+                            >
+                        </div>
+                    </div>
+                    <!-- Add more entries as needed -->
                 </div>
             </section>
 
@@ -591,194 +791,6 @@
                             >
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section
-                id="experience"
-                class="py-12 md:py-20 bg-white pt-16 md:pt-24"
-            >
-                <!-- Added padding-top -->
-                <!-- ... (keep content the same) ... -->
-                <div class="max-w-3xl mx-auto px-4">
-                    <h2
-                        class="text-3xl md:text-4xl lora-bold mb-8 md:mb-12 text-center"
-                    >
-                        Experience
-                    </h2>
-
-                    <div class="mb-8 md:mb-10">
-                        <h3 class="text-xl lora-bold mb-1">
-                            Software (Full Stack) Developer
-                        </h3>
-                        <p class="text-lg text-gray-700 mb-1">
-                            WSO2, Sri Lanka
-                        </p>
-                        <p class="text-sm text-gray-500 mb-3">
-                            June 2025 - Present
-                        </p>
-                        <p class="text-base text-gray-600 leading-relaxed">
-                            Currently, as an Full Stack Engineer at WSO2, I'm
-                            responsible for maintaining and improving the WSO2
-                            Superapp. Since joining, a few noteworthy
-                            improvements are enabling Push Notifications for the
-                            app, implementing and phasing out the use of PIIs
-                            within our services and app, and the development of
-                            a WSO2Con Microapp. More to come xD
-                        </p>
-                        <div
-                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
-                        >
-                            <span
-                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
-                                >React Native</span
-                            >
-                            <span
-                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Go Lang</span
-                            >
-                            <span
-                                class="inline-block bg-black text-white text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Expo</span
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Experience Entry 1 -->
-                    <div class="mb-8 md:mb-10">
-                        <h3 class="text-xl lora-bold mb-1">iOS Developer</h3>
-                        <p class="text-lg text-gray-700 mb-1">
-                            PickMe Sri Lanka
-                        </p>
-                        <p class="text-sm text-gray-500 mb-3">
-                            March 2025 - June 2025
-                        </p>
-                        <p class="text-base text-gray-600 leading-relaxed">
-                            As an iOS Developer at PickMe, my proudest
-                            contribution is spearheading the design and
-                            implementation of a crucial backend-driven form
-                            system enabling multi-tenant user sign-up flows
-                            across both Android and iOS platforms which aimed to
-                            streamline the user onboarding experience. Alongside
-                            this, I've been instrumental in the modernization of
-                            the Driver app, contributing key components and
-                            enhancements using SwiftUI to improve its interface
-                            and overall performance.
-                        </p>
-                        <div
-                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
-                        >
-                            <span
-                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >SwiftUI</span
-                            >
-                            <span
-                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Server-driven Forms</span
-                            >
-                            <span
-                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >API Integration</span
-                            >
-                            <span
-                                class="inline-block bg-orange-300 text-orange-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Location Services</span
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Experience Entry 2 -->
-                    <div class="mb-8 md:mb-10">
-                        <h3 class="text-xl lora-bold mb-1">
-                            Software Engineer I (iOS)
-                        </h3>
-                        <p class="text-lg text-gray-700 mb-1">
-                            Circles.Life Singapore
-                        </p>
-                        <p class="text-sm text-gray-500 mb-3">
-                            July 2022 - April 2024
-                        </p>
-                        <p class="text-base text-gray-600 leading-relaxed">
-                            As a Software Engineer I at Circles.Life in
-                            Singapore, I played a key role in modernizing the
-                            iOS application by leading the migration of over 10
-                            core legacy Objective-C/UIKit views to Swift using
-                            both UIKit and SwiftUI. I also contributed to
-                            improving code reusability by creating a dedicated
-                            SwiftUI library for JSON-based text styling. Beyond
-                            feature development, I took ownership of managing
-                            the Bitrise CI/CD pipelines, specifically tackling
-                            challenges with non-Rosetta Xcode stacks, and gained
-                            valuable leadership experience by mentoring a junior
-                            iOS intern for a year.
-                        </p>
-                        <div
-                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
-                        >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Obj-C</span
-                            >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >UIKit</span
-                            >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Go</span
-                            >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Server-driven UI</span
-                            >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Bitrise</span
-                            >
-                            <span
-                                class="inline-block bg-cyan-300 text-cyan-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Cocoapods</span
-                            >
-                        </div>
-                    </div>
-
-                    <!-- Experience Entry 3 -->
-                    <div class="mb-8 md:mb-10">
-                        <h3 class="text-xl lora-bold mb-1">
-                            Intern/Associate iOS Developer
-                        </h3>
-                        <p class="text-lg text-gray-700 mb-1">
-                            ThinkSmart Solutions
-                        </p>
-                        <p class="text-sm text-gray-500 mb-3">
-                            June 2020 - August 2021
-                        </p>
-                        <p class="text-base text-gray-600 leading-relaxed">
-                            Assisted senior developers in building and testing
-                            iOS app components. Gained hands-on experience with
-                            Xcode, Interface Builder, and version control (Git).
-                            Created Glideshow, a UIKit Slideshow library
-                            inspired by the Wolt App. Maintained, Fixed bugs and
-                            contributed to UI implementation.
-                        </p>
-                        <div
-                            class="mb-8 flex flex-wrap justify-center md:justify-start gap-2 py-4"
-                        >
-                            <span
-                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >UIKit</span
-                            >
-                            <span
-                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >GraphQL</span
-                            >
-                            <span
-                                class="inline-block bg-red-300 text-red-800 text-xs font-medium px-2.5 py-1 rounded-full"
-                                >Cocoapods</span
-                            >
-                        </div>
-                    </div>
-                    <!-- Add more entries as needed -->
                 </div>
             </section>
 
